@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="binary.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="sticky">
+        <div class="left">
+            <a href="../index.html" class="logo">
+                <img src="../img/logoHead.png" alt="" srcset="">
+            </a>
+        </div>
+        <div class="right">
+            <a href="#" id="logIn" class="login">
+                <span>Login</span>
+                <img src="../img/sign-in-alt-solid.svg" alt="">
+            </a>
+        </div>
+    </header>
+    <main>
+        <section class="main">
+            <div class="text">
+                <div class="wrapper">
+                    <div class="profile-card js-profile-card">
+                      <div class="profile-card__img">
+                        <img src="../img/binary1.jpg" alt="profile card">
+                      </div>
+                  
+                      <div class="profile-card__cnt js-profile-cnt">
+                        <div class="profile-card__name">Converter</div>
+                        <div class="profile-card__txt">from <strong>decimal to binary</strong></div>
+                        <div class="profile-card-loc">                 
+                          <table>
+                            <tbody>
+                                <tr>
+                                    <td><b>Insert Decimal Number: </b></td>
+                                </tr>
+                                <tr>
+                                    <td><input type = "text" name = "deci" id = "deci" size = "15" maxlength = "15" /></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="button" value="Convert!" onclick="dec2bin()" /></td>
+                                </tr>
+                                <tr>
+                                    <td><div id = "result"></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+
+                        <div class="profile-card-ctr">
+                          <button class="profile-card__button button--blue js-message-btn" id="backToMain">Назад</button>
+                          <button class="profile-card__button button--orange" id="nextPage">Следующий</button>
+                        </div>
+                      </div>
+                  
+                      <div class="profile-card-message js-message">
+                        <form class="profile-card-form">
+                          <div class="profile-card-form__container">
+                            <textarea placeholder="Say something..."></textarea>
+                          </div>
+                  
+                          <div class="profile-card-form__bottom">
+                            <button class="profile-card__button button--blue js-message-close">
+                              Send
+                            </button>
+                  
+                            <button class="profile-card__button button--gray js-message-close">
+                              Cancel
+                            </button>
+                          </div>
+
+                        </form>   
+                        <div class="profile-card__overlay js-message-close"></div>
+                      </div>           
+                    </div>         
+                  </div>       
+            </div>         
+        </section>  
+    </main>
+
+    <script type = "text/javascript">
+
+        function dec2bin() {
+        var x = document.getElementById("deci").value;
+        if ((/[^0-9]/g.test(x)) || x == "") {
+        alert ("You must enter an integer decimal number!");
+        document.getElementById("deci").value = "";
+        document.getElementById("deci").focus();
+        return false;
+        }
+        x = parseInt(x);
+        var bin = x.toString(2);
+        var hex = x.toString(16).toUpperCase();
+        var octal = x.toString(8);
+
+
+        var figs = "The binary representation of " + x + " is " + bin + "<br>";
+        figs = figs + "The hexadecimal representation of " + x + " is " + hex + "<br>";
+        figs = figs + "The octal representation of " + x + " is " + octal + "<br>";
+
+        document.getElementById("result").innerHTML = figs;
+        }
+
+        document.getElementById("backToMain").onclick = function() {backToMain()};
+
+        function backToMain(){
+            var url = '../index.html';
+            location.href = url;
+
+        }
+
+        document.getElementById("nextPage").onclick = function() {nextPage()};
+
+        function nextPage(){
+            var url = '../mathPage/math.html';
+            location.href = url;
+
+        }
+    </script>
+</body>
+</html>
+
+                <!-- <form name="calcform" autocomplete="off">
+                    <div class="flex-container">
+                        <table class="calc">
+                            <tbody>
+                                <tr>
+                                    <td><b>Insert Decimal Number: </b></td>
+                                </tr>
+                                <tr>
+                                    <td><input type = "text" name = "deci" id = "deci" size = "15" maxlength = "15" /></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="button" value="Convert!" onclick="dec2bin()" /></td>
+                                </tr>
+                                <tr>
+                                    <td><div id = "result"></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                         <b>Insert Decimal Number: </b><input type = "text" name = "deci" id = "deci" size = "15" maxlength = "15" />
+                        <input type="button" value="Convert!" onclick="dec2bin()" />
+                        <br><br>
+                        <div id = "result"></div>
+                  
+                    </div>
+                </form> -->

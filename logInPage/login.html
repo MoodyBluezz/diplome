@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="../logInPage/login.css">
+</head>
+<body>
+    <div>
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="../img/avatar2.png" alt="Avatar" class="avatar">
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Имя пользователя</b></label>
+            <input type="text" placeholder="Введите имя пользователя" name="uname" required>
+      
+            <label for="psw"><b>Пароль</b></label>
+            <input type="password" placeholder="Введите пароль" name="psw" required>
+              
+            <button type="submit">Авторизоваться</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Запомнить меня
+            </label>
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" id="id01" class="cancelbtn">Отмена</button>
+            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="registrationbtn">Регистрация</button>
+            <span class="psw">Забыли <a href="#">пароль?</a></span>
+          </div>
+        </form>
+    </div>
+    <script>
+        // Get the modal
+        document.getElementById('id01').onclick = function() {backToMain()};
+
+        function backToMain(){
+          var url = '../index.html';
+            location.href = url;
+        }
+        
+        // // When the user clicks anywhere outside of the modal, close it
+        // window.onclick = function(event) {
+        //     if (event.target == modal) {
+        //         modal.style.display = "none";
+        //     }
+        // }
+
+        var modal2 = document.getElementById('id02');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal2) {
+                modal2.style.display = "none";
+            }
+        }
+        </script>
+</body>
+</html>
