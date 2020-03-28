@@ -62,7 +62,7 @@
 
                         <div class="profile-card-ctr">
                           <button class="profile-card__button button--blue js-message-btn" id="backToMain">Назад</button>
-                          <button class="profile-card__button button--orange">Следующий</button>
+                          <button class="profile-card__button button--orange" id="nextPage">Следующий</button>
                         </div>
                       </div>
                   
@@ -119,6 +119,14 @@
 
         function backToMain(){
             var url = '../index.html';
+            location.href = url;
+
+        }
+
+        document.getElementById("nextPage").onclick = function() {nextPage()};
+
+        function nextPage(){
+            var url = '../videoPage/video.html';
             location.href = url;
 
         }

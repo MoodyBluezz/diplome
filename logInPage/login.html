@@ -10,7 +10,7 @@
     <div>
         <form class="modal-content animate" action="/action_page.php" method="post">
           <div class="imgcontainer">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <span id="closeX" class="close" title="Close Modal">&times;</span>
             <img src="../img/avatar2.png" alt="Avatar" class="avatar">
           </div>
       
@@ -37,6 +37,7 @@
     <script>
         // Get the modal
         document.getElementById('id01').onclick = function() {backToMain()};
+        document.getElementById('closeX').onclick = function() {backToMain()};
 
         function backToMain(){
           var url = '../index.html';
@@ -50,14 +51,14 @@
         //     }
         // }
 
-        var modal2 = document.getElementById('id02');
+        // var modal = document.getElementById('id01');
         
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal2) {
-                modal2.style.display = "none";
-            }
-        }
+        // // When the user clicks anywhere outside of the modal, close it
+        // window.onclick = function(event) {
+        //     if (event.target == modal) {
+        //         modal.style.display = "none";
+        //     }
+        // }
         </script>
 </body>
 </html>
