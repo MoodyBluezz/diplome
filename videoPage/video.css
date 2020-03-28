@@ -611,3 +611,52 @@ a, a:hover {
   transition: all .3s;
 }
 /*# sourceMappingURL=binary.css.map */
+
+.profile-card-loc input[type="button"]  {
+  box-sizing: border-box;
+  background-color: transparent;
+  border-radius: 0.6em;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  line-height: 1;
+  margin: 20px auto 0;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  border-color: #3498db;
+  color: #fff;
+  border: none;
+  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+  transition: all 150ms ease-in-out;
+}
+
+.profile-card-loc input[type="button"]:hover {
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+  color: #3498db;
+}
+
+.profile-card-loc input[type="button"]:hover,
+.profile-card-loc input[type="button"]:focus {
+  outline: 0;
+}
+
+#deci {
+  width: 250px;
+  height: 35px;
+  border-radius: 8px;
+  border: 1px solid #c1c1c1;
+  margin-top: 20px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 18px;
+}
+
+p.fig {
+  font-weight: 400;
+  font-style: italic;
+}

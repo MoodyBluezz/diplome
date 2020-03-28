@@ -45,7 +45,9 @@
                                     <td><input type="button" value="Convert!" onclick="dec2bin()" /></td>
                                 </tr>
                                 <tr>
-                                    <td><div id = "result"></div></td>
+                                    <td>
+                                        <div id="result"></div>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -85,32 +87,24 @@
     <script type = "text/javascript">
 
         function dec2bin() {
-        var x = document.getElementById("deci").value;
-        if ((/[^0-9]/g.test(x)) || x == "") {
-        alert ("You must enter an integer decimal number!");
-        document.getElementById("deci").value = "";
-        document.getElementById("deci").focus();
-        return false;
-        }
-        x = parseInt(x);
-        var bin = x.toString(2);
-        var hex = x.toString(16).toUpperCase();
-        var octal = x.toString(8);
+            var x = document.getElementById("deci").value;
+            if ((/[^0-9]/g.test(x)) || x == "") {
+                alert ("You must enter an integer decimal number!");
+                document.getElementById("deci").value = "";
+                document.getElementById("deci").focus();
+                return false;
+            }
+            x = parseInt(x);
+            var bin = x.toString(2);
+            var hex = x.toString(16).toUpperCase();
+            var octal = x.toString(8);
 
 
-        var figs = "The binary representation of " + x + " is " + bin + "<br>";
-        figs = figs + "The hexadecimal representation of " + x + " is " + hex + "<br>";
-        figs = figs + "The octal representation of " + x + " is " + octal + "<br>";
+            var figs = "The binary representation of " + x + " is " + bin + "<br>";
+            figs = figs + "The hexadecimal representation of " + x + " is " + hex + "<br>";
+            figs = figs + "The octal representation of " + x + " is " + octal + "<br>";
 
-        document.getElementById("result").innerHTML = figs;
-        }
-
-        document.getElementById("backToMain").onclick = function() {backToMain()};
-
-        function backToMain(){
-            var url = '../index.html';
-            location.href = url;
-
+            document.getElementById("result").innerHTML = figs;
         }
 
         document.getElementById("nextPage").onclick = function() {nextPage()};

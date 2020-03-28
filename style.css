@@ -168,12 +168,24 @@ header .right .login img {
 }
 
 .blocks .item .btns {
-  float: right;
   padding: 8px;
 }
 
 .blocks .item .btns a {
-  margin: 0 10px;
+  display: table;
+  padding: 8px 15px;
+  font-size: 19px;
+  font-weight: 500;
+  border-radius: 5px;
+  color: #266fc3;
+}
+
+.blocks .item .btns a:hover {
+  background-color: #266fc321;
+}
+
+.blocks .item .btns a:active {
+  background-color: #266fc349;
 }
 
 .blocks .item .btns a i {
@@ -215,7 +227,7 @@ header .right .login img {
 /*# sourceMappingURL=style.css.map */
 
 .sidenav {
-  height: 100%;
+  height: 1080px;
   width: 0;
   position: fixed;
   z-index: 1;

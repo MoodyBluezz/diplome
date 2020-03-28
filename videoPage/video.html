@@ -45,7 +45,11 @@
                                     <td><input type="button" value="Convert!" onclick="dec2bin()" /></td>
                                 </tr>
                                 <tr>
-                                    <td><div id = "result"></div></td>
+                                    <td><div id = "result">
+                                      <p class="fig"><span>The binary representation of</span>&nbsp;&nbsp;<span id="fig1"></span></p>
+                                      <p class="fig"><span>The hexadecimal representation of</span>&nbsp;&nbsp;<span id="fig2"></span></p>
+                                      <p class="fig"><span>The octal representation of</span>&nbsp;&nbsp;<span id="fig3"></span></p>
+                                  </div></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -84,25 +88,44 @@
 
     <script type = "text/javascript">
 
-        function dec2bin() {
-        var x = document.getElementById("deci").value;
-        if ((/[^0-9]/g.test(x)) || x == "") {
-        alert ("You must enter an integer decimal number!");
-        document.getElementById("deci").value = "";
-        document.getElementById("deci").focus();
-        return false;
+        var fig = document.getElementsByClassName("fig");
+        for(var i = 0; i < fig.length; i++) {
+          fig[i].style.display = "none";
         }
-        x = parseInt(x);
-        var bin = x.toString(2);
-        var hex = x.toString(16).toUpperCase();
-        var octal = x.toString(8);
+          
+
+        function dec2bin() {
+          for(var i = 0; i < fig.length; i++) {
+            fig[i].style.display = "block";
+          }
+            var x = document.getElementById("deci").value;
+            if ((/[^0-9]/g.test(x)) || x == "") {
+                alert ("You must enter an integer decimal number!");
+                document.getElementById("deci").value = "";
+                document.getElementById("deci").focus();
+                return false;
+            }
+            x = parseInt(x);
+            var bin = x.toString(2);
+            var hex = x.toString(16).toUpperCase();
+            var octal = x.toString(8);
 
 
-        var figs = "The binary representation of " + x + " is " + bin + "<br>";
-        figs = figs + "The hexadecimal representation of " + x + " is " + hex + "<br>";
-        figs = figs + "The octal representation of " + x + " is " + octal + "<br>";
+            var fig1 = "<span style='color: #3498db; font-style: normal; font-weight: 900;'>" + x + "</span> is <span style='color: #d5135a; font-style: normal; font-weight: 900;'>" + bin + "</span><br>";
+            var fig2 = "<span style='color: #3498db; font-style: normal; font-weight: 900;'>" + x + "</span> is <span style='color: #d5135a; font-style: normal; font-weight: 900;'>" + hex + "</span><br>";
+            var fig3 = "<span style='color: #3498db; font-style: normal; font-weight: 900;'>" + x + "</span> is <span style='color: #d5135a; font-style: normal; font-weight: 900;'>" + octal + "</span><br>";
 
-        document.getElementById("result").innerHTML = figs;
+            document.getElementById("fig1").innerHTML = fig1;
+            document.getElementById("fig2").innerHTML = fig2;
+            document.getElementById("fig3").innerHTML = fig3;
+        }
+
+        document.getElementById("backToMain").onclick = function() {backToMain()};
+
+        function backToMain(){
+            var url = '../index.html';
+            location.href = url;
+
         }
 
         document.getElementById("backToMain").onclick = function() {backToMain()};

@@ -8,7 +8,6 @@
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "350px";
-    document.getElementById("mySidenav").style.height = "1080px";
   }
   
   function closeNav() {
