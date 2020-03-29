@@ -30,29 +30,21 @@
                       </div>
                   
                       <div class="profile-card__cnt js-profile-cnt">
-                        <div class="profile-card__name">Converter</div>
+                        <div class="profile-card__name">Видеоматериалы</div>
                         <div class="profile-card__txt">from <strong>decimal to binary</strong></div>
                         <div class="profile-card-loc">                 
-                          <table>
-                            <tbody>
-                                <tr>
-                                    <td><b>Insert Decimal Number: </b></td>
-                                </tr>
-                                <tr>
-                                    <td><input type = "text" name = "deci" id = "deci" size = "15" maxlength = "15" /></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="button" value="Convert!" onclick="dec2bin()" /></td>
-                                </tr>
-                                <tr>
-                                    <td><div id = "result">
-                                      <p class="fig"><span>The binary representation of</span>&nbsp;&nbsp;<span id="fig1"></span></p>
-                                      <p class="fig"><span>The hexadecimal representation of</span>&nbsp;&nbsp;<span id="fig2"></span></p>
-                                      <p class="fig"><span>The octal representation of</span>&nbsp;&nbsp;<span id="fig3"></span></p>
-                                  </div></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                          <video id="myVideo" width="240" height="176" controls autoplay>
+                            <source id="mp4_src" src="../video/intro.mp4" type="video/mp4">
+                            <!-- <source id="ogg_src" src="mov_bbb.ogg" type="video/ogg"> -->
+                            Your browser does not support HTML5 video.
+                          </video>
+                          &nbsp;&nbsp
+                          <video id="myVideo" width="240" height="176" controls autoplay>
+                            <source id="mp4_src" src="../video/intro.mp4" type="video/mp4">
+                            <!-- <source id="ogg_src" src="mov_bbb.ogg" type="video/ogg"> -->
+                            Your browser does not support HTML5 video.
+                          </video>
+                          
                         </div>
 
                         <div class="profile-card-ctr">
@@ -88,37 +80,11 @@
 
     <script type = "text/javascript">
 
-        var fig = document.getElementsByClassName("fig");
-        for(var i = 0; i < fig.length; i++) {
-          fig[i].style.display = "none";
-        }
-          
-
-        function dec2bin() {
-          for(var i = 0; i < fig.length; i++) {
-            fig[i].style.display = "block";
-          }
-            var x = document.getElementById("deci").value;
-            if ((/[^0-9]/g.test(x)) || x == "") {
-                alert ("You must enter an integer decimal number!");
-                document.getElementById("deci").value = "";
-                document.getElementById("deci").focus();
-                return false;
-            }
-            x = parseInt(x);
-            var bin = x.toString(2);
-            var hex = x.toString(16).toUpperCase();
-            var octal = x.toString(8);
-
-
-            var fig1 = "<span style='color: #3498db; font-style: normal; font-weight: 900;'>" + x + "</span> is <span style='color: #d5135a; font-style: normal; font-weight: 900;'>" + bin + "</span><br>";
-            var fig2 = "<span style='color: #3498db; font-style: normal; font-weight: 900;'>" + x + "</span> is <span style='color: #d5135a; font-style: normal; font-weight: 900;'>" + hex + "</span><br>";
-            var fig3 = "<span style='color: #3498db; font-style: normal; font-weight: 900;'>" + x + "</span> is <span style='color: #d5135a; font-style: normal; font-weight: 900;'>" + octal + "</span><br>";
-
-            document.getElementById("fig1").innerHTML = fig1;
-            document.getElementById("fig2").innerHTML = fig2;
-            document.getElementById("fig3").innerHTML = fig3;
-        }
+        function myFunction() { 
+          document.getElementById("mp4_src").src = "../video/intro.mp4";
+          // document.getElementById("ogg_src").src = "movie.ogg";
+          document.getElementById("myVideo").load();
+        } 
 
         document.getElementById("backToMain").onclick = function() {backToMain()};
 
