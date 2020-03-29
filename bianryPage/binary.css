@@ -104,12 +104,11 @@ header .right .login img {
 .main {
   position: relative;
   height: 100vh;
-  background-image: url(img/abst.png);
   background-size: cover;
 }
 
 .main::before {
-  content: '';
+  /*content: '';*/
   position: absolute;
   top: 0;
   left: 0;
@@ -136,8 +135,7 @@ a, a:hover {
   width: 100%;
   height: auto;
   min-height: 100vh;
-  padding: 50px 20px;
-  padding-top: 100px;
+  padding: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,7 +153,7 @@ a, a:hover {
 }
 
 .profile-card {
-  width: 100%;
+  width: 32%;
   min-height: 460px;
   margin: auto;
   -webkit-box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
@@ -645,7 +643,7 @@ a, a:hover {
   outline: 0;
 }
 
-#deci {
+.profile-card-loc input[type="text"] {
   width: 250px;
   height: 35px;
   border-radius: 8px;
@@ -656,7 +654,11 @@ a, a:hover {
   font-size: 18px;
 }
 
-p.fig {
+.profile-card-loc p {
   font-weight: 400;
   font-style: italic;
+}
+
+.profile-card-ctr {
+  display: none;
 }
