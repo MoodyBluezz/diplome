@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../video.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="sticky">
+        <div class="left">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+            <span style="font-size:30px;cursor:pointer;color: aliceblue;" onclick="openNav()">&#9776;</span>
+            <a href="/" class="logo">
+                <img src="/img/logoHead.png" alt="" srcset="">
+            </a>
+        </div>
+        <div class="right">
+            <a href="#" id="logIn" class="login">
+                <span>Login</span>
+                <img src="/img/sign-in-alt-solid.svg" alt="">
+            </a>
+        </div>
+    </header>
+    <main>
+        <section class="main">
+            <div class="text">
+                <div class="wrapper">
+                    <div class="profile-card js-profile-card">
+                        <div class="profile-card__img">
+                            <img src="../inf/inf.jpg" alt="profile card">
+                        </div>
+
+                        <div class="profile-card__cnt js-profile-cnt">
+                            <div class="profile-card__name">Информатика</div>
+                            <!-- <div class="profile-card__txt">from <strong>decimal to binary</strong></div> -->
+                            <div class="profile-card-loc vid">
+                                <div>
+                                    <div class="container-video">
+                                        <iframe class="video" src="https://www.youtube.com/embed/2JGbRnJfG0g"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="container-video">
+                                        <iframe class="video" src="https://www.youtube.com/embed/2JGbRnJfG0g"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="container-video">
+                                        <iframe class="video" src="https://www.youtube.com/embed/2JGbRnJfG0g"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile-card-ctr">
+                                <button class="profile-card__button button--blue js-message-btn"
+                                    id="backToMain">Назад</button>
+                                <!-- <button class="profile-card__button button--orange" id="nextPage">Следующий</button> -->
+                            </div>
+                        </div>
+
+                        <div class="profile-card-message js-message">
+                            <form class="profile-card-form">
+                                <div class="profile-card-form__container">
+                                    <textarea placeholder="Say something..."></textarea>
+                                </div>
+
+                                <div class="profile-card-form__bottom">
+                                    <button class="profile-card__button button--blue js-message-close">
+                                        Send
+                                    </button>
+
+                                    <button class="profile-card__button button--gray js-message-close">
+                                        Cancel
+                                    </button>
+                                </div>
+
+                            </form>
+                            <div class="profile-card__overlay js-message-close"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="/index.js"></script>
+
+    <script type="text/javascript">
+        document.getElementById("backToMain").onclick = function () { backToMain() };
+        function backToMain() {
+            var url = '../video.html';
+            location.href = url;
+        }
+        /*document.getElementById("nextPage").onclick = function () { nextPage() };
+        function nextPage() {
+            var url = '../bianryPage/binary.html';
+            location.href = url;
+        }*/
+    </script>
+</body>
+
+</html>

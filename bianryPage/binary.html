@@ -4,15 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="binary.css">
   <title>Document</title>
-  <link rel="stylesheet" href="../bianryPage/fullpage.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/lipten/slidePage/dist/slidePage.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  <link rel="stylesheet" href="binary.css">
 </head>
 
 <body>
   <header class="sticky">
     <div class="left">
-      <a href="../index.html" class="logo">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+      <span style="font-size:30px;cursor:pointer;color: aliceblue;" onclick="openNav()">&#9776;</span>
+      <a href="/" class="logo">
         <img src="../img/logoHead.png" alt="" srcset="">
       </a>
     </div>
@@ -24,11 +33,11 @@
     </div>
   </header>
   <main>
-    <section class="main">
-      <div class="text">
+    <div class="main">
+      <div class="slide-container" id="slide-container">
         <!-- <div id="fullpage"> -->
           <!-- <div class="section" id="section0"> -->
-            <div class="wrapper">
+            <section class="wrapper slide-page page1">
               <div class="profile-card js-profile-card">
                 <div class="profile-card__img">
                   <img src="../img/binary1.jpg" alt="profile card">
@@ -182,16 +191,16 @@
                   <div class="profile-card__overlay js-message-close"></div>
                 </div>
               </div>
-            </div>
+            </section>
           <!-- </div> -->
           <!-- <div class="section" id="section1"> -->
-            <div class="wrapper">
+            <section class="wrapper slide-page page2">
               <div class="profile-card js-profile-card">
                 <div class="profile-card__img">
                   <img src="../img/binary1.jpg" alt="profile card">
                 </div>
                 <div class="profile-card__cnt js-profile-cnt">
-                  <div class="profile-card__name">Converter</div>
+                  <!-- <div class="profile-card__name">Converter</div> -->
                   <div class="profile-card__txt">from <strong>decimal to binary</strong></div>
                   <div class="profile-card-loc">
                     <table>
@@ -339,10 +348,10 @@
                   <div class="profile-card__overlay js-message-close"></div>
                 </div>
               </div>
-            </div>
+            </section>
           <!-- </div> -->
           <!-- <div class="section" id="section2"> -->
-            <div class="wrapper">
+            <section class="wrapper slide-page page3">
               <div class="profile-card js-profile-card">
                 <div class="profile-card__img">
                   <img src="../img/binary1.jpg" alt="profile card">
@@ -496,22 +505,33 @@
                   <div class="profile-card__overlay js-message-close"></div>
                 </div>
               </div>
-            </div>
+            </section>
           <!-- </div> -->
         <!-- </div> -->
       </div>
-    </section>
+    </div>
   </main>
 
-  <script src="../bianryPage/fullpage.min.js"></script>
-
-  <script type="text/javascript">
-    var myFullpage = new fullpage('#fullpage', {
-      anchors: ['firstPage', 'secondPage', '3rdPage'],
-      scrollBar: true
-    });
-  </script>
+  <script src="../index.js"></script>
   <script src="binary.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/lipten/slidePage/dist/slidePage.min.js"></script>
+  <script>
+    var slidepage = new slidePage({
+      slideContainer: '#slide-container',
+      slidePages: '.slide-page',
+      page: 1,
+      refresh: true,
+      dragMode: false,
+      useWheel: true,
+      useSwipe: true,
+      useAnimation : true,
+
+      // Events
+      before: function(origin,direction,target){},
+      after: function(origin,direction,target){},
+  });
+  </script>
 </body>
 
 </html>
