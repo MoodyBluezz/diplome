@@ -104,8 +104,6 @@ header .right .login img {
 .main {
   position: relative;
   height: 100vh;
-  background-image: url(img/abst.png);
-  background-size: cover;
 }
 
 .main::before {
@@ -162,7 +160,7 @@ a, a:hover {
           box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
   background: #fff;
   border-radius: 12px;
-  max-width: 700px;
+  max-width: 850px;
   position: relative;
 }
 
@@ -248,6 +246,7 @@ a, a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -418,7 +417,7 @@ a, a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 576px) {
@@ -611,3 +610,59 @@ a, a:hover {
   transition: all .3s;
 }
 /*# sourceMappingURL=binary.css.map */
+
+
+#app {
+  width: 100%;
+}
+
+.perspec {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 420px;
+  max-width: 768px;
+  margin: 0 auto;
+  font-family: monospace, sans-serif;
+  font-size: 16px;
+}
+.perspec label:not(:last-child) {
+  display: inline-block;
+  text-align: left;
+  /* margin-bottom: 10px; */
+}
+.perspec label input[type="range"] {
+  display: inline-block;
+  margin-top: 5px;
+}
+section.settings {
+  width: 50%;
+  z-index: 2;
+}
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+}
+.box-container {
+  padding: 50px;
+  border: 1px solid #f38181;
+  overflow: hidden;
+}
+.box {
+  width: 150px;
+  height: 150px;
+  background: #f38181;
+}
+.transform-origin-radio-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.transform-origin-x {
+  margin-right: 10%;
+  text-align: left;
+}
+.transform-origin-y {
+  text-align: left;
+}

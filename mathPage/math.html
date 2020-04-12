@@ -1,135 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="math.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="math.css">
 </head>
+
 <body>
-    <header class="sticky">
-        <div class="left">
-            <a href="../index.html" class="logo">
-                <img src="../img/logoHead.png" alt="" srcset="">
-            </a>
-        </div>
-        <div class="right">
-            <a href="#" id="logIn" class="login">
-                <span>Login</span>
-                <img src="../img/sign-in-alt-solid.svg" alt="">
-            </a>
-        </div>
-    </header>
-    <br>
-    <main>
-        <section class="main">
-            <div class="text">
-                <div class="wrapper">
-                    <div class="profile-card js-profile-card">
-                      <div class="profile-card__img">
-                        <img src="../img/math1.jpg" alt="profile card">
-                      </div>
-                  
-                      <div class="profile-card__cnt js-profile-cnt">
-                        <div class="profile-card__name">Numbers converter</div>
-                        <div class="profile-card__txt"><strong>Converts numbers between different numbering scales</strong></div>
-                        <div class="profile-card-loc">                 
-                            <form method="post">
-                                <table>
-                                <tr height="1"><td colspan="2" bgcolor="black"></td></tr>
-                                <tr>
-                                  <td>Number to convert:<br />May hold numbers as well as letters</td>
-                                  <td><input type="text" name="originalNumber"></td>
-                                </tr>
-                                <tr height="1"><td colspan="2" bgcolor="gray"></td></tr>
-                                <tr>
-                                  <td>Scale to convert from:<br />Fx. 2 for binary or 16 for hexadecimal<br />min. 2, max. <script>document.write(convertBase.length)</script></td>
-                                  <td><input type="text" name="originalScale"></td>
-                                </tr>
-                                <tr height="1"><td colspan="2" bgcolor="gray"></td></tr>
-                                <tr>
-                                  <td>Scale to convert to:</td>
-                                  <td><input type="text" name="destinationScale"></td>
-                                </tr>
-                                <tr height="1"><td colspan="2" bgcolor="gray"></td></tr>
-                                <tr>
-                                  <td><input type="button" onClick='destinationNumber.value=convert(originalNumber.value,originalScale.value,destinationScale.value)' value="Convert"></td>
-                                  <td><input type="text" name="destinationNumber"></td>
-                                </tr></table>
-                                
-                                </form>
-                        </div>
+  <header class="sticky">
+    <div class="left">
+      <a href="../index.html" class="logo">
+        <img src="../img/logoHead.png" alt="" srcset="">
+      </a>
+    </div>
+    <div class="right">
+      <a href="#" id="logIn" class="login">
+        <span>Login</span>
+        <img src="../img/sign-in-alt-solid.svg" alt="">
+      </a>
+    </div>
+  </header>
+  <br>
+  <main>
+    <section class="main">
+      <div class="text">
+        <div class="wrapper">
+          <div class="profile-card js-profile-card">
+            <div class="profile-card__img">
+              <img src="../img/math1.jpg" alt="profile card">
+            </div>
 
-                        <div class="profile-card-ctr">
-                          <button class="profile-card__button button--blue js-message-btn" id="backToMain">Назад</button>
-                          <button class="profile-card__button button--orange" id="nextPage">Следующий</button>
-                        </div>
-                      </div>
-                  
-                      <div class="profile-card-message js-message">
-                        <form class="profile-card-form">
-                          <div class="profile-card-form__container">
-                            <textarea placeholder="Say something..."></textarea>
+            <div class="profile-card__cnt js-profile-cnt">
+              <div class="profile-card__name">Numbers converter</div>
+              <div class="profile-card__txt"><strong>Converts numbers between different numbering scales</strong></div>
+              <div class="profile-card-loc">
+                <div id="app">
+                  <div class="perspec">
+                    <section class="settings">
+                      <div class="settings-container">
+                        <label for="">
+                          perspective: {{perspective}}px;<br>
+                          <input type="range" min="0" max="999" v-model="perspective" />
+                        </label>
+                        <br>
+                        <label for="">
+                          rotateX: {{rotateX}}deg; <br>
+                          <input type="range" min="-180" max="180" v-model="rotateX" />
+                        </label>
+                        <br>
+                        <label for="">
+                          rotateY: {{rotateY}}deg; <br>
+                          <input type="range" min="-180" max="180" v-model="rotateY" />
+                        </label>
+                        <br>
+                        <label for="">
+                          rotateZ: {{rotateZ}}deg; <br>
+                          <input type="range" min="-180" max="180" v-model="rotateZ" />
+                        </label>
+                        <br>
+                        <label for="">
+                          transform-origin:{{transformOriginX }} {{transformOriginY}}; <br>
+                          <div class="transform-origin-radio-buttons">
+                            <div class="transform-origin-x">
+                              <label for="t-left">
+                                <input type="radio" name="transform-left" value="left" v-model="transformOriginX"
+                                  id="t-left" /> left
+                              </label>
+                              <br>
+                              <label for="t-right">
+                                <input type="radio" name="transform-left" value="right" v-model="transformOriginX"
+                                  id="t-right" /> right
+                              </label>
+                              <br>
+                              <label for="t-center">
+                                <input type="radio" name="transform-left" value="center" v-model="transformOriginX"
+                                  id="t-center" /> center
+                              </label>
+                            </div>
+
+                            <div class="transform-origin-y">
+                              <label for="t-top">
+                                <input type="radio" name="transform-right" value="top" v-model="transformOriginY"
+                                  id="t-top" /> top
+                              </label>
+                              <br>
+                              <label for="t-bottom">
+                                <input type="radio" name="transform-right" value="bottom" v-model="transformOriginY"
+                                  id="t-bottom" /> bottom
+                              </label>
+                              <br>
+                              <label for="t-center2">
+                                <input type="radio" name="transform-right" value="center" v-model="transformOriginY"
+                                  id="t-center2" /> center
+                              </label>
+                            </div>
                           </div>
-                  
-                          <div class="profile-card-form__bottom">
-                            <button class="profile-card__button button--blue js-message-close">
-                              Send
-                            </button>
-                  
-                            <button class="profile-card__button button--gray js-message-close">
-                              Cancel
-                            </button>
-                          </div>
 
-                        </form>   
-                        <div class="profile-card__overlay js-message-close"></div>
-                      </div>           
-                    </div>         
-                  </div>       
-            </div>         
-        </section>  
-    </main>
+                        </label>
+                      </div>
+                    </section>
+                    <section class="output">
+                      <div class="box-container">
+                        <div class="box" :style="{ 
+                                      transform: `perspective(${perspective}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`,
+                                      transformOrigin:`${transformOriginX} ${transformOriginY}`
+                                      
+                                      }"></div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
 
-    <script type = "text/javascript">
+              <div class="profile-card-ctr">
+                <button class="profile-card__button button--blue js-message-btn" id="backToMain">Назад</button>
+                <button class="profile-card__button button--orange" id="nextPage">Следующий</button>
+              </div>
+            </div>
 
-        //Numbers converter script by Lars Peter Thomsen
-        //For this script and more Visit http://www.javascriptkit.com
-        //Please keep this notice intact
+            <div class="profile-card-message js-message">
+              <form class="profile-card-form">
+                <div class="profile-card-form__container">
+                  <textarea placeholder="Say something..."></textarea>
+                </div>
 
-        convertBase="0123456789abcdefghijklmnopqrstuvwxyz";
-        function convert(input,origin,dest) {
-        input=input.toString().toLowerCase(); origin=origin.toString(); dest=dest.toString()
-        var b=0; var Result="";
-        if (Number(origin)>convertBase.length || Number(dest)>convertBase.length || Number(origin)<2 || Number(dest)<2) return "Invalid numbering system"
-        for (var c=1;c<=input.length;c++) { b+=convertBase.indexOf(input.substring(c-1,c))*(Math.pow(origin,input.length-c)); if (convertBase.indexOf(input.substring(c-1,c)) > Number(origin)) return 'Character "'+input.substring(c-1,c)+'" not present in origin system'; }
-        var a=Math.floor(Math.log(b)/Math.log(dest))
-        while (a>-1) {
-        var e=Math.pow(dest,a)
+                <div class="profile-card-form__bottom">
+                  <button class="profile-card__button button--blue js-message-close">
+                    Send
+                  </button>
+
+                  <button class="profile-card__button button--gray js-message-close">
+                    Cancel
+                  </button>
+                </div>
+
+              </form>
+              <div class="profile-card__overlay js-message-close"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="math.js"></script>
+  <script type="text/javascript">
+
+    //Numbers converter script by Lars Peter Thomsen
+    //For this script and more Visit http://www.javascriptkit.com
+    //Please keep this notice intact
+
+    convertBase = "0123456789abcdefghijklmnopqrstuvwxyz";
+    function convert(input, origin, dest) {
+      input = input.toString().toLowerCase(); origin = origin.toString(); dest = dest.toString()
+      var b = 0; var Result = "";
+      if (Number(origin) > convertBase.length || Number(dest) > convertBase.length || Number(origin) < 2 || Number(dest) < 2) return "Invalid numbering system"
+      for (var c = 1; c <= input.length; c++) { b += convertBase.indexOf(input.substring(c - 1, c)) * (Math.pow(origin, input.length - c)); if (convertBase.indexOf(input.substring(c - 1, c)) > Number(origin)) return 'Character "' + input.substring(c - 1, c) + '" not present in origin system'; }
+      var a = Math.floor(Math.log(b) / Math.log(dest))
+      while (a > -1) {
+        var e = Math.pow(dest, a)
         a--;
-        var d=(b-b%e)/e+1;
-        b%=e;
-        Ciffer=convertBase.substring(d-1,d);
-        Result+=Ciffer;
-        }
-        return Result
-        }
+        var d = (b - b % e) / e + 1;
+        b %= e;
+        Ciffer = convertBase.substring(d - 1, d);
+        Result += Ciffer;
+      }
+      return Result
+    }
 
-        document.getElementById("backToMain").onclick = function() {backToMain()};
+    document.getElementById("backToMain").onclick = function () { backToMain() };
 
-        function backToMain(){
-            var url = '../index.html';
-            location.href = url;
+    function backToMain() {
+      var url = '../index.html';
+      location.href = url;
 
-        }
+    }
 
-        document.getElementById("nextPage").onclick = function() {nextPage()};
+    document.getElementById("nextPage").onclick = function () { nextPage() };
 
-        function nextPage(){
-            var url = '../videoPage/video.html';
-            location.href = url;
+    function nextPage() {
+      var url = '../videoPage/video.html';
+      location.href = url;
 
-        }
-    </script>
+    }
+  </script>
 </body>
+
 </html>
