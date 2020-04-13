@@ -15,36 +15,26 @@ body {
   padding: 0;
   font-family: 'Roboto', sans-serif;
 }
+  
+.text h2 {
+  font-weight: 300;
+  font-size: 35px;
+  margin: 0;
+}
 
-/* .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    color: #ffffff;
-    text-align: center;
-  } */
-  
-  .text h2 {
-    font-weight: 300;
-    font-size: 35px;
-    margin: 0;
-  }
-  
-  .text h5 {
-    font-size: 17px;
-    margin: 0;
-    margin-top: 10px;
-  }
-  
-  .text h5 a {
-    color: inherit;
-  }
-  
-  .text h5 a:hover {
-    text-decoration: underline;
-  }
+.text h5 {
+  font-size: 17px;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.text h5 a {
+  color: inherit;
+}
+
+.text h5 a:hover {
+  text-decoration: underline;
+}
 
 header {
   background: #2670c3;
@@ -80,7 +70,7 @@ header .left .logo img:first-child {
 }
 
 header .left .logo img:last-child {
-  width: 90px;
+  width: 75px;
 }
 
 header .right .login {
@@ -103,7 +93,7 @@ header .right .login img {
 
 .main {
   position: relative;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .main::before {
@@ -131,11 +121,10 @@ a, a:hover {
 
 .wrapper {
   width: 100%;
-  width: 100%;
   height: auto;
-  min-height: 100vh;
+  min-height: 100%;
   padding: 50px 20px;
-  padding-top: 100px;
+  padding-top: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,7 +136,7 @@ a, a:hover {
 @media screen and (max-width: 768px) {
   .wrapper {
     height: auto;
-    min-height: 100vh;
+    min-height: 100%;
     padding-top: 100px;
   }
 }
@@ -665,4 +654,42 @@ section.settings {
 }
 .transform-origin-y {
   text-align: left;
+}
+.sidenav {
+  height: 1080px;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }

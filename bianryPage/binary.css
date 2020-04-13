@@ -15,36 +15,26 @@ body {
   padding: 0;
   font-family: 'Roboto', sans-serif;
 }
+  
+.text h2 {
+  font-weight: 300;
+  font-size: 35px;
+  margin: 0;
+}
 
-/* .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    color: #ffffff;
-    text-align: center;
-  } */
-  
-  .text h2 {
-    font-weight: 300;
-    font-size: 35px;
-    margin: 0;
-  }
-  
-  .text h5 {
-    font-size: 17px;
-    margin: 0;
-    margin-top: 10px;
-  }
-  
-  .text h5 a {
-    color: inherit;
-  }
-  
-  .text h5 a:hover {
-    text-decoration: underline;
-  }
+.text h5 {
+  font-size: 17px;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.text h5 a {
+  color: inherit;
+}
+
+.text h5 a:hover {
+  text-decoration: underline;
+}
 
 header {
   background: #2670c3;
@@ -80,7 +70,7 @@ header .left .logo img:first-child {
 }
 
 header .left .logo img:last-child {
-  width: 90px;
+  width: 75px;
 }
 
 header .right .login {
@@ -136,6 +126,7 @@ a, a:hover {
   height: auto;
   min-height: 100vh;
   padding: 0 20px;
+  padding-top: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

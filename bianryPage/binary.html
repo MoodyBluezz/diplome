@@ -21,7 +21,7 @@
         <a href="#">Contact</a>
       </div>
       <span style="font-size:30px;cursor:pointer;color: aliceblue;" onclick="openNav()">&#9776;</span>
-      <a href="/" class="logo">
+      <a href="../index.html" class="logo">
         <img src="../img/logoHead.png" alt="" srcset="">
       </a>
     </div>
@@ -43,13 +43,13 @@
                   <img src="../img/binary1.jpg" alt="profile card">
                 </div>
                 <div class="profile-card__cnt js-profile-cnt">
-                  <div class="profile-card__name">Converter</div>
-                  <div class="profile-card__txt">from <strong>decimal to binary</strong></div>
+                  <div class="profile-card__name">Преобразователь</div>
+                  <div class="profile-card__txt">с <strong>десятичного на двоичный</strong></div>
                   <div class="profile-card-loc">
                     <table>
                       <tbody>
                         <tr>
-                          <td><b>Insert Decimal Number: </b></td>
+                          <td><b>Введите десятичное число: </b></td>
                         </tr>
                         <tr>
                           <td><input type="text" name="deci1" id="deci1" size="15" maxlength="15" /></td>
@@ -59,7 +59,7 @@
                         </tr>
                         <tr>
                           <td>
-                            <p id="fig1"><span>The binary representation of</span>  <span id="fig1_1"></span></p>
+                            <p id="fig1"><span>двоичное представление </span>  <span id="fig1_1"></span></p>
                           </td>
                         </tr>
                       </tbody>
@@ -93,13 +93,13 @@
                 </div>
     
                 <div class="profile-card__cnt js-profile-cnt">
-                  <div class="profile-card__name">Converter</div>
-                  <div class="profile-card__txt">from <strong>decimal to binary</strong></div>
+                  <div class="profile-card__name">Преобразователь</div>
+                  <div class="profile-card__txt">с <strong>десятичного на шестнадцатеричный</strong></div>
                   <div class="profile-card-loc">
                     <table>
                       <tbody>
                         <tr>
-                          <td><b>Insert Decimal Number: </b></td>
+                          <td><b>Введите десятичное число: </b></td>
                         </tr>
                         <tr>
                           <td><input type="text" name="deci2" id="deci2" size="15" maxlength="15" /></td>
@@ -109,7 +109,7 @@
                         </tr>
                         <tr>
                           <td>
-                            <p id="fig2"><span>The hexadecimal representation of</span>  <span id="fig2_2"></span></p>
+                            <p id="fig2"><span>Шестнадцатеричный представление </span>  <span id="fig2_2"></span></p>
                           </td>
                         </tr>
                       </tbody>
@@ -145,13 +145,13 @@
                 </div>
     
                 <div class="profile-card__cnt js-profile-cnt">
-                  <div class="profile-card__name">Converter</div>
-                  <div class="profile-card__txt">from <strong>decimal to binary</strong></div>
+                  <div class="profile-card__name">Преобразователь</div>
+                  <div class="profile-card__txt">с <strong>десятичного на восьмеричное</strong></div>
                   <div class="profile-card-loc">
                     <table>
                       <tbody>
                         <tr>
-                          <td><b>Insert Decimal Number: </b></td>
+                          <td><b>Введите десятичное число: </b></td>
                         </tr>
                         <tr>
                           <td><input type="text" name="deci3" id="deci3" size="15" maxlength="15" /></td>
@@ -161,7 +161,7 @@
                         </tr>
                         <tr>
                           <td>
-                            <p id="fig3"><span>The octal representation of</span>  <span id="fig3_3"></span></p>
+                            <p id="fig3"><span>Восьмеричное представление </span>  <span id="fig3_3"></span></p>
                           </td>
                         </tr>
                       </tbody>
@@ -200,26 +200,31 @@
                   <img src="../img/binary1.jpg" alt="profile card">
                 </div>
                 <div class="profile-card__cnt js-profile-cnt">
-                  <!-- <div class="profile-card__name">Converter</div> -->
-                  <div class="profile-card__txt">from <strong>decimal to binary</strong></div>
+                  <div class="profile-card__name">Преобразователь</div>
+                  <div class="profile-card__txt">длины.</div>
                   <div class="profile-card-loc">
                     <table>
-                      <tbody>
-                        <tr>
-                          <td><b>Insert Decimal Number: </b></td>
-                        </tr>
-                        <tr>
-                          <td><input type="text" name="deci1" id="deci1" size="15" maxlength="15" /></td>
-                        </tr>
-                        <tr>
-                          <td><input type="button" value="Convert!" onclick="dec2bin()"/></td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <p id="fig1"><span>The binary representation of</span>  <span id="fig1_1"></span></p>
-                          </td>
-                        </tr>
-                      </tbody>
+                      <form name=cminch method="post">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <input type="text" onblur=cmconvert() value=2.54 name=cm> см.</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input type="text" onblur=feetconvert() value=0 name=feet> шаг</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input type="text" onblur=inchconvert() value=1 name=inch> дю.</td>
+                          </tr>
+                          <tr>
+                            <td width="50%">
+                                <p><input type="button" value="Submit" name="B3"></p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </form>
                     </table>
                   </div>
                   <div class="profile-card-ctr">
@@ -250,26 +255,53 @@
                 </div>
     
                 <div class="profile-card__cnt js-profile-cnt">
-                  <div class="profile-card__name">Converter</div>
-                  <div class="profile-card__txt">from <strong>decimal to binary</strong></div>
+                  <div class="profile-card__name">Преобразователь длинны</div>
                   <div class="profile-card-loc">
                     <table>
-                      <tbody>
-                        <tr>
-                          <td><b>Insert Decimal Number: </b></td>
-                        </tr>
-                        <tr>
-                          <td><input type="text" name="deci2" id="deci2" size="15" maxlength="15" /></td>
-                        </tr>
-                        <tr>
-                          <td><input type="button" value="Convert!" onclick="dec2hexa()"/></td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <p id="fig2"><span>The hexadecimal representation of</span>  <span id="fig2_2"></span></p>
-                          </td>
-                        </tr>
-                      </tbody>
+                      <form name="length_con"></form>
+                        <tbody>
+                          <tr>
+                            <td>From </td>
+                            <td>
+                              <select name=from_unit onChange="convert_unit()";>
+                              <option> centimeters
+                              <option> meters
+                              <option> kilometers
+                              <option> miles
+                              <option> inches
+                              <option> feet
+                              <option> yards
+                              </select>
+                            </td>
+                            <td>  To </td>
+                            <td>
+                              <select name=to_unit onChange="convert_unit()";>
+                              <option> centimeters
+                              <option> meters
+                              <option> kilometers
+                              <option> miles
+                              <option> inches
+                              <option> feet
+                              <option> yards
+                              </select>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td> </td><td colspan="3"><div id="formula">centimeters = 1 centimeters</div></td>
+                            </tr>
+
+                            <tr>
+                            <td colspan="4"> </td>
+                            </tr>
+
+                            <tr>
+                            <td>Enter </td>
+                            <td><input type="text" name="from_value" value="1" size="12" maxlength="12"></td>
+                            <td> <input type=button value="To" onClick="convert_unit()";> </td>
+                            <td><div id="to_value">1</div></td>
+                            </tr>
+                        </tbody>
+                      </form>
                     </table>
                   </div>
     
@@ -302,13 +334,13 @@
                 </div>
     
                 <div class="profile-card__cnt js-profile-cnt">
-                  <div class="profile-card__name">Converter</div>
-                  <div class="profile-card__txt">from <strong>decimal to binary</strong></div>
+                  <div class="profile-card__name">Преобразователь</div>
+                  <div class="profile-card__txt">с <strong>десятичного на двоичный</strong></div>
                   <div class="profile-card-loc">
                     <table>
                       <tbody>
                         <tr>
-                          <td><b>Insert Decimal Number: </b></td>
+                          <td><b>Введите десятичное число: </b></td>
                         </tr>
                         <tr>
                           <td><input type="text" name="deci3" id="deci3" size="15" maxlength="15" /></td>
@@ -357,13 +389,13 @@
                   <img src="../img/binary1.jpg" alt="profile card">
                 </div>
                 <div class="profile-card__cnt js-profile-cnt">
-                  <div class="profile-card__name">Converter</div>
-                  <div class="profile-card__txt">from <strong>decimal to binary</strong></div>
+                  <div class="profile-card__name">Преобразователь</div>
+                  <div class="profile-card__txt">с <strong>десятичного на двоичный</strong></div>
                   <div class="profile-card-loc">
                     <table>
                       <tbody>
                         <tr>
-                          <td><b>Insert Decimal Number: </b></td>
+                          <td><b>Введите десятичное число: </b></td>
                         </tr>
                         <tr>
                           <td><input type="text" name="deci1" id="deci1" size="15" maxlength="15" /></td>
@@ -407,13 +439,13 @@
                 </div>
     
                 <div class="profile-card__cnt js-profile-cnt">
-                  <div class="profile-card__name">Converter</div>
-                  <div class="profile-card__txt">from <strong>decimal to binary</strong></div>
+                  <div class="profile-card__name">Преобразователь</div>
+                  <div class="profile-card__txt">с <strong>десятичного на двоичный</strong></div>
                   <div class="profile-card-loc">
                     <table>
                       <tbody>
                         <tr>
-                          <td><b>Insert Decimal Number: </b></td>
+                          <td><b>Введите десятичное число: </b></td>
                         </tr>
                         <tr>
                           <td><input type="text" name="deci2" id="deci2" size="15" maxlength="15" /></td>
@@ -459,13 +491,13 @@
                 </div>
     
                 <div class="profile-card__cnt js-profile-cnt">
-                  <div class="profile-card__name">Converter</div>
-                  <div class="profile-card__txt">from <strong>decimal to binary</strong></div>
+                  <div class="profile-card__name">Преобразователь</div>
+                  <div class="profile-card__txt">с <strong>десятичного на двоичный</strong></div>
                   <div class="profile-card-loc">
                     <table>
                       <tbody>
                         <tr>
-                          <td><b>Insert Decimal Number: </b></td>
+                          <td><b>Введите десятичное число: </b></td>
                         </tr>
                         <tr>
                           <td><input type="text" name="deci3" id="deci3" size="15" maxlength="15" /></td>
