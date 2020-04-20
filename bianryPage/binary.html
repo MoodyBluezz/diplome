@@ -55,7 +55,7 @@
                           <td><input type="text" name="deci1" id="deci1" size="15" maxlength="15" /></td>
                         </tr>
                         <tr>
-                          <td><input type="button" value="Convert!" onclick="dec2bin()"/></td>
+                          <td><input type="button" value="Ответ" onclick="dec2bin()"/></td>
                         </tr>
                         <tr>
                           <td>
@@ -105,7 +105,7 @@
                           <td><input type="text" name="deci2" id="deci2" size="15" maxlength="15" /></td>
                         </tr>
                         <tr>
-                          <td><input type="button" value="Convert!" onclick="dec2hexa()"/></td>
+                          <td><input type="button" value="Ответ" onclick="dec2hexa()"/></td>
                         </tr>
                         <tr>
                           <td>
@@ -157,7 +157,7 @@
                           <td><input type="text" name="deci3" id="deci3" size="15" maxlength="15" /></td>
                         </tr>
                         <tr>
-                          <td><input type="button" value="Convert!" onclick="dec2octa()"/></td>
+                          <td><input type="button" value="Ответ" onclick="dec2octa()"/></td>
                         </tr>
                         <tr>
                           <td>
@@ -220,7 +220,7 @@
                           </tr>
                           <tr>
                             <td width="50%">
-                                <p><input type="button" value="Submit" name="B3"></p>
+                                <p><input type="button" value="Ответ" name="B3"></p>
                             </td>
                           </tr>
                         </tbody>
@@ -260,46 +260,50 @@
                     <form name="length_con">
                       <table class="length-converter">
                         <tr>
-                          <td>From</td>
+                          <td>С</td>
                           <td>
                             <label>
                               <select name=from_unit onChange="convert_unit()";>
-                                <option> centimeters
-                                <option> meters
-                                <option> kilometers
-                                <option> miles
-                                <option> inches
-                                <option> feet
-                                <option> yards
+                                <option> сантиметры
+                                <option> метры
+                                <option> километры
+                                <option> мили
+                                <option> дюйм
+                                <option> фут
+                                <option> ярд
                               </select>
                             </label>
                           </td>
                         </tr>
                         <tr>
-                          <td>To</td>
+                          <td>На</td>
                           <td>
                             <label>
                               <select name=to_unit onChange="convert_unit()";>
-                                <option> centimeters
-                                <option> meters
-                                <option> kilometers
-                                <option> miles
-                                <option> inches
-                                <option> feet
-                                <option> yards
+                                  <option> сантиметры
+                                  <option> метры
+                                  <option> километры
+                                  <option> мили
+                                  <option> дюйм
+                                  <option> фут
+                                  <option> ярд
                               </select>
                             </label>
                           </td>
                         </tr>
                         <tr>
-                          <td colspan="3"><div id="formula">centimeters = 1 centimeters</div></td>
+                          <td colspan="3"><div id="formula">сантиметр = 1 сантиметр</div></td>
                         </tr>
+                      
+                        <!-- <tr>
+                          <td colspan="4"> </td>
+                        </tr> -->
                         <tr>
-                          <td>Enter</td>
+                          <td>Введите</td>
                           <td><input type="text" name="from_value" value="1" size="12" maxlength="12"></td>
                         </tr>
                         <tr>
-                          <td><input type=button value="To" onClick="convert_unit()";></td>
+                          <td><input type=button value="Ответ" onClick="convert_unit()";></td>
                           <td>&nbsp;&nbsp;Ответ: <div id="to_value">1</div></td>
                         </tr>
                       </table>
@@ -336,26 +340,18 @@
     
                 <div class="profile-card__cnt js-profile-cnt">
                   <div class="profile-card__name">Преобразователь</div>
-                  <div class="profile-card__txt">с <strong>десятичного на двоичный</strong></div>
+                  <div class="profile-card__txt">чисел <strong>памяти</strong></div>
                   <div class="profile-card-loc">
-                    <table>
-                      <tbody>
-                        <tr>
-                          <td><b>Введите десятичное число: </b></td>
-                        </tr>
-                        <tr>
-                          <td><input type="text" name="deci3" id="deci3" size="15" maxlength="15" /></td>
-                        </tr>
-                        <tr>
-                          <td><input type="button" value="Convert!" onclick="dec2octa()"/></td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <p id="fig3"><span>The octal representation of</span>  <span id="fig3_3"></span></p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <form name="bandwidth" method="post">
+                      <input type="text" name="original" size="20" value=1024> 
+                      <select class="custom-select" size="1" name="units">
+                        <option value="Bytes">Байты</option>
+                        <option value="Kb">Kb</option>
+                        <option value="Mb">Mb</option>
+                        <option value="Gb">Gb</option>
+                      </select> 
+                      <input type="button" value="Ответ" name="B1" onClick="calculate()">
+                    </form>
                   </div>
     
                   <div class="profile-card-ctr">
@@ -393,24 +389,18 @@
                   <div class="profile-card__name">Преобразователь</div>
                   <div class="profile-card__txt">с <strong>десятичного на двоичный</strong></div>
                   <div class="profile-card-loc">
-                    <table>
-                      <tbody>
+                    <form method="POST" name="sorter">
+                      <table cellspacing="0" cellpadding="0" width="100%">
                         <tr>
-                          <td><b>Введите десятичное число: </b></td>
-                        </tr>
-                        <tr>
-                          <td><input type="text" name="deci1" id="deci1" size="15" maxlength="15" /></td>
-                        </tr>
-                        <tr>
-                          <td><input type="button" value="Convert!" onclick="dec2bin()"/></td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <p id="fig1"><span>The binary representation of</span>  <span id="fig1_1"></span></p>
+                          <td width="100%">
+                            <textarea rows="5" name="sorter2" cols="50" wrap="virtual"></textarea><br>
+                            <input id="button1" type="button" value="Алфавит" name="B4" onClick="sortvalues(0)"> 
+                            <input id="button2" type="button" value="Номер" name="B5" onClick="sortvalues(1)"> 
+                            <input id="button3" type="reset" value="Обновить" name="B6">
                           </td>
                         </tr>
-                      </tbody>
-                    </table>
+                      </table>
+                    </form>
                   </div>
                   <div class="profile-card-ctr">
                     <button class="profile-card__button button--blue js-message-btn" id="backToMain">Назад</button>
@@ -441,26 +431,14 @@
     
                 <div class="profile-card__cnt js-profile-cnt">
                   <div class="profile-card__name">Преобразователь</div>
-                  <div class="profile-card__txt">с <strong>десятичного на двоичный</strong></div>
+                  <div class="profile-card__txt">с <strong>метра/c на милю/час</strong></div>
                   <div class="profile-card-loc">
-                    <table>
-                      <tbody>
-                        <tr>
-                          <td><b>Введите десятичное число: </b></td>
-                        </tr>
-                        <tr>
-                          <td><input type="text" name="deci2" id="deci2" size="15" maxlength="15" /></td>
-                        </tr>
-                        <tr>
-                          <td><input type="button" value="Convert!" onclick="dec2hexa()"/></td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <p id="fig2"><span>The hexadecimal representation of</span>  <span id="fig2_2"></span></p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <form name="converter">
+                      <input type="text" value="0.0"  name="mps"> метров/с
+                      <input type="text" value="0.0"  name="mph"> миль/час
+                      <input id="button1" id="button2" type="button" value="Ответ" onclick="javascript:calc()"> 
+                      <input id="button2" id="button2" type="reset" value="Обновить" onclick="javascript:calc()">
+                    </form>
                   </div>
     
                   <div class="profile-card-ctr">
@@ -495,24 +473,21 @@
                   <div class="profile-card__name">Преобразователь</div>
                   <div class="profile-card__txt">с <strong>десятичного на двоичный</strong></div>
                   <div class="profile-card-loc">
-                    <table>
-                      <tbody>
-                        <tr>
-                          <td><b>Введите десятичное число: </b></td>
-                        </tr>
-                        <tr>
-                          <td><input type="text" name="deci3" id="deci3" size="15" maxlength="15" /></td>
-                        </tr>
-                        <tr>
-                          <td><input type="button" value="Convert!" onclick="dec2octa()"/></td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <p id="fig3"><span>The octal representation of</span>  <span id="fig3_3"></span></p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <form name=form1 method="post">
+                      
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>Число <br> <input style="width: 150px;" type="text" size=5 name=a></td>
+                            <td>Процент <br> <input style="width: 150px;" type="text" size=5 name=b></td>
+                          </tr>
+                          <tr>
+                            <td><input onclick=perc1() type=button value=Ответ></td>
+                            <td>Ответ: <br> <input style="width: 150px;" type="text" maxLength=40 size=5 name=total1></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </form>
                   </div>
     
                   <div class="profile-card-ctr">

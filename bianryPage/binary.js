@@ -100,6 +100,68 @@ function convert_unit()
 }
 ////////////////////////
 
+var bytevalue=0
+function calculate(){
+var invalue=document.bandwidth.original.value
+var selectunit=document.bandwidth.units.options[document.bandwidth.units.selectedIndex].value
+    if (selectunit=="Bytes")
+        bytevalue=invalue
+    else if (selectunit=="Kb")
+        bytevalue=invalue*1024
+    else if (selectunit=="Mb")
+        bytevalue=invalue*1024*1024
+    else if (selectunit=="Gb")
+        bytevalue=invalue*1024*1024*1024
+
+    alert (invalue+" "+selectunit+" равен:\n\n- "+bytevalue+" Байтам\n- "+Math.round(bytevalue/1024)+" Kb\n- "+Math.round(bytevalue/1024/1024)+" Mb\n- "+Math.round(bytevalue/1024/1024/1024)+" Gb\n")
+}
+///////////
+/*
+    Data sorter script
+    By JavaScript Kit (http://javascriptkit.com)
+    Over 300+ free scripts here!
+    */
+    
+    
+    function sortit(a,b){
+    return(a-b)
+    }
+    
+    function sortvalues(param){
+    if (window.print||(document.images&&!document.all)){
+        var inputvalues=document.sorter.sorter2.value.split(" ")
+    if (param==0)
+        inputvalues.sort()
+    else
+        inputvalues.sort(sortit)
+    document.sorter.sorter2.value=''
+    for (i=0;i<inputvalues.length-1;i++)
+        document.sorter.sorter2.value=document.sorter.sorter2.value+inputvalues[i]+" "
+        document.sorter.sorter2.value+=inputvalues[inputvalues.length-1]
+    }
+    else
+        alert("You need NS 3+ or IE 5+ to use this program!")
+    }
+///////////////
+//MPS to MPH converter script
+//Visit http://javascriptkit.com for this script
+
+//calculate function
+function calc(){
+
+    //variables
+    var meterspersecond = document.converter.mps.value
+    var calculated = Math.round(meterspersecond * 3600 / 1610.3*1000)/1000
+    
+    //write in text box
+    document.converter.mph.value=calculated
+}
+//////////
+function perc1() {
+    a = document.form1.a.value/100;
+    b = a*document.form1.b.value;
+    document.form1.total1.value = b
+}
 /*document.getElementById("backToMain").onclick = function () { backToMain() };
 
 function backToMain() {

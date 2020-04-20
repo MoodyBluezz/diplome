@@ -5,9 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Авторизация</title>
     <link rel="stylesheet" href="../logInPage/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div>
+  <header class="sticky">    
+    <div class="left sticky">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+        <span style="font-size:30px;cursor:pointer;color: aliceblue;" onclick="openNav()">&#9776;</span>
+        <a href="../index.html" class="logo">
+            <img src="../img/logoHead.png" alt="" srcset="">
+        </a>
+    </div>
+    <div class="right">
+        <div id="valueOutput">
+          
+        </div>
+    </div>
+  </header>
+  <main>
+    <div class="positioning">
         <form class="modal-content animate" action="/action_page.php" method="post">
           <div class="imgcontainer">
             <span id="closeX" class="close" title="Close Modal">&times;</span>
@@ -16,12 +38,12 @@
       
           <div class="container">
             <label for="uname"><b>Имя пользователя</b></label>
-            <input type="text" placeholder="Введите имя пользователя" name="uname" required>
+            <input id="inpName" type="text" placeholder="Введите имя пользователя" name="uname" required>
       
-            <label for="psw"><b>Пароль</b></label>
-            <input type="password" placeholder="Введите пароль" name="psw" required>
+            <!-- <label for="psw"><b>Пароль</b></label>
+            <input id="inpPass" type="password" placeholder="Введите пароль" name="psw" required> -->
               
-            <button type="submit">Авторизоваться</button>
+            <button id="btnSubmit" type="button">Авторизоваться</button>
             <label>
               <input type="checkbox" checked="checked" name="remember"> Запомнить меня
             </label>
@@ -34,31 +56,19 @@
           </div>
         </form>
     </div>
-    <script>
-        // Get the modal
-        document.getElementById('id01').onclick = function() {backToMain()};
-        document.getElementById('closeX').onclick = function() {backToMain()};
+  </main>
 
-        function backToMain(){
-          var url = '../index.html';
-            location.href = url;
-        }
-        
-        // // When the user clicks anywhere outside of the modal, close it
-        // window.onclick = function(event) {
-        //     if (event.target == modal) {
-        //         modal.style.display = "none";
-        //     }
-        // }
+  <script src="login.js"></script>
+  <script>
 
-        // var modal = document.getElementById('id01');
-        
-        // // When the user clicks anywhere outside of the modal, close it
-        // window.onclick = function(event) {
-        //     if (event.target == modal) {
-        //         modal.style.display = "none";
-        //     }
-        // }
-        </script>
-</body>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "350px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+
+    </script>
+  </body>
 </html>

@@ -572,7 +572,7 @@ a, a:hover {
 .profile-card textarea {
   width: 100%;
   resize: none;
-  height: 210px;
+  height: 100px;
   margin-bottom: 20px;
   border: 2px solid #dcdcdc;
   border-radius: 10px;
@@ -604,6 +604,43 @@ a, a:hover {
   transition: all .3s;
 }
 /*# sourceMappingURL=binary.css.map */
+
+.custom-select{
+  position: absolute;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 10px;
+  align-self: center;
+  margin: 20px 5px 0;
+  padding: 8px 10px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  z-index: 99;
+}
+
+.profile-card-loc input[type="reset"]  {
+  box-sizing: border-box;
+  background-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 10px;
+  line-height: 1;
+  margin: 20px auto 0;
+  padding: 1.2em 10px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  border-color: #3498db;
+  color: #fff;
+  border: none;
+  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+  transition: all 150ms ease-in-out;
+}
 
 .profile-card-loc input[type="button"]  {
   box-sizing: border-box;
@@ -767,3 +804,8 @@ a, a:hover {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+#button1 , #button2, #button3 {
+  display:inline-block;
+  /**other codes**/
+  }

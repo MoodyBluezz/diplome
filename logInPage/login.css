@@ -4,9 +4,8 @@ body {
   margin: 0;
   padding: 0;
   background-image: linear-gradient(-20deg, #ff2846 0%, #6944ff 100%);
-  background-image: linear-gradient(-20deg, #ff2846 0%, #6944ff 100%);
+  /* background-image: linear-gradient(-20deg, #ff2846 0%, #6944ff 100%); */
   height: 100vh;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -135,4 +134,105 @@ span.psw {
   .cancelbtn {
      width: 100%;
   }
+  .registrationbtn {
+    width: 100%;
+ }
+}
+
+header {
+  background: #2670c3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 20px;
+  -webkit-box-shadow: 0 4px 8px #00000080;
+          box-shadow: 0 4px 8px #00000080;
+  z-index: 99;
+}
+
+header.sticky {
+  position: fixed;
+  /* margin-bottom: 50px; */
+  right: 0;
+  left: 0;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+header .left .logo {
+  display: inline-block;
+}
+
+header .left .logo img:first-child {
+  width: 30px;
+}
+
+header .left .logo img:last-child {
+  width: 75px;
+}
+
+header .right .login {
+  font-size: 15px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .right .login img {
+  width: 20px;
+  margin-left: 8px;
+}
+
+.sidenav {
+  height: 1080px;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.positioning {
+  position: absolute;
+  margin: 0 auto;
+  top: 100px;
+  height: 500px;
+  width: 100%;
 }
