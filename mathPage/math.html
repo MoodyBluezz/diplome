@@ -48,59 +48,59 @@
                     <section class="settings">
                       <div class="settings-container">
                         <label for="">
-                          perspective: {{perspective}}px;<br>
+                          перспективы: {{perspective}}px;<br>
                           <input type="range" min="0" max="999" v-model="perspective" />
                         </label>
                         <br>
                         <label for="">
-                          rotateX: {{rotateX}}deg; <br>
+                          крутить по Х: {{rotateX}}deg; <br>
                           <input type="range" min="-180" max="180" v-model="rotateX" />
                         </label>
                         <br>
                         <label for="">
-                          rotateY: {{rotateY}}deg; <br>
+                          крутить по Y: {{rotateY}}deg; <br>
                           <input type="range" min="-180" max="180" v-model="rotateY" />
                         </label>
                         <br>
                         <label for="">
-                          rotateZ: {{rotateZ}}deg; <br>
+                          крутить по Z: {{rotateZ}}deg; <br>
                           <input type="range" min="-180" max="180" v-model="rotateZ" />
                         </label>
                         <br>
                         <label for="">
-                          transform-origin:{{transformOriginX }} {{transformOriginY}}; <br>
+                          преобразовать источник: {{transformOriginX }} {{transformOriginY}}; <br>
                           <div class="transform-origin-radio-buttons">
                             <div class="transform-origin-x">
                               <label for="t-left">
                                 <input type="radio" name="transform-left" value="left" v-model="transformOriginX"
-                                  id="t-left" /> left
+                                  id="t-left" /> лево
                               </label>
                               <br>
                               <label for="t-right">
                                 <input type="radio" name="transform-left" value="right" v-model="transformOriginX"
-                                  id="t-right" /> right
+                                  id="t-right" /> право
                               </label>
                               <br>
                               <label for="t-center">
                                 <input type="radio" name="transform-left" value="center" v-model="transformOriginX"
-                                  id="t-center" /> center
+                                  id="t-center" /> центр
                               </label>
                             </div>
 
                             <div class="transform-origin-y">
                               <label for="t-top">
                                 <input type="radio" name="transform-right" value="top" v-model="transformOriginY"
-                                  id="t-top" /> top
+                                  id="t-top" /> верх
                               </label>
                               <br>
                               <label for="t-bottom">
                                 <input type="radio" name="transform-right" value="bottom" v-model="transformOriginY"
-                                  id="t-bottom" /> bottom
+                                  id="t-bottom" /> низ
                               </label>
                               <br>
                               <label for="t-center2">
                                 <input type="radio" name="transform-right" value="center" v-model="transformOriginY"
-                                  id="t-center2" /> center
+                                  id="t-center2" /> центр
                               </label>
                             </div>
                           </div>
