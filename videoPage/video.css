@@ -745,7 +745,7 @@ p.fig {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -775,4 +775,34 @@ p.fig {
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+.translate {
+  display: inline-block;
+  position: relative;
+}
+
+a {
+  color: white; 
+}
+
+.more a {
+  color: #313131;
+}
+
+.more {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 5px 5px;
+  right: 0;
+  width: 80px;
+}
+
+.more a {
+  line-height: 20px;
+  display: block;
+  margin: 3px;
+  color: #313131;
+  padding: 0 5px;
 }

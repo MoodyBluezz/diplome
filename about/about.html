@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="video.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
   <title>Document</title>
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
     <div class="extra">
       <a href="../logInPage/login.html" id="logIn" class="login">
           <span>Войти</span>
-          <img src="img/sign-in-alt-solid.svg" alt="">
+          <img src="/img/sign-in-alt-solid.svg" alt="">
       </a>
       <div class="translate">
           <a href="#" id="valueOutput"><span></span></a>
@@ -36,38 +36,40 @@
         <div class="wrapper">
           <div class="profile-card js-profile-card">
             <div class="profile-card__img">
-              <img src="../img/videoImg.jpg" alt="profile card">
+              <img src="../img/contactMe.jpg" alt="profile card">
             </div>
 
             <div class="profile-card__cnt js-profile-cnt">
-              <div class="profile-card__name">Видеоматериалы</div>
-              <!-- <div class="profile-card__txt">from <strong>decimal to binary</strong></div> -->
-              <div class="profile-card-loc cat">
-                <div class="category phys">
-                  <a href="phys/phys.html">
-                    <img src="../videoPage/phys/phys.jpg" alt="">
-                    <span>Физика</span>
-                  </a>
-                </div>
-                <div class="category math">
-                  <a href="math/math.html">
-                    <img src="../videoPage/math/math.jpg" alt="">
-                    <span>Математика</span>
-                  </a>
-                </div>
-                <div class="category inf">
-                  <a href="inf/inf.html">
-                    <img src="../videoPage/inf/inf.jpg" alt="">
-                    <span>Информатика</span>
-                  </a>
-                </div>
-                <div class="category prog">
-                  <a href="prog/prog.html">
-                    <img src="../videoPage/prog/prog.jpg" alt="">
-                    <span>Программирование</span>
-                  </a>
+              <div class="profile-card__name">Связаться</div>
+              <div class="profile-card__txt"><strong>со мной.</strong></div>
+              <div class="profile-card-loc">
+                <div id="app">
+                  <div class="perspec">
+                    <section id="footer_link">
+                        <footer class="footer-distributed">
+            
+                            <div class="footer-left">
+                            </div>
+            
+                            <div class="footer-right">
+
+                              <p>Связаться со мной</p>
+          
+                              <form action="https://formspree.io/xjvennbn" method="POST" enctype="multipart/form-data">
+                                  <input type="text" name="_replyto" placeholder="Email">
+                                  <textarea name="message" placeholder="Сообщение"></textarea>
+                                  <button type="submit">Отправить</button>
+                              </form>
+          
+                          </div>
+          
+            
+                        </footer>
+                    </section>
+                  </div>
                 </div>
               </div>
+
               <div class="profile-card-ctr">
                 <button class="profile-card__button button--blue js-message-btn" id="backToMain">Назад</button>
                 <!-- <button class="profile-card__button button--orange" id="nextPage">Следующий</button> -->
@@ -98,24 +100,21 @@
       </div>
     </section>
   </main>
-  <script src="../index.js"></script>
-
-  <script type="text/javascript">
-
-    document.getElementById("backToMain").onclick = function () { backToMain() };
-
-    function backToMain() {
-      var url = '../index.html';
-      location.href = url;
-    }
-
-    // document.getElementById("nextPage").onclick = function () { nextPage() };
-
-    // function nextPage() {
-    //   var url = '../bianryPage/binary.html';
-    //   location.href = url;
-    // }
-  </script>
 </body>
+<script src="../index.js"></script>
+<script>
+  document.getElementById("backToMain").onclick = function () { backToMain() };
 
+function backToMain() {
+  var url = '../index.html';
+  location.href = url;
+}
+
+document.getElementById("nextPage").onclick = function () { nextPage() };
+
+function nextPage() {
+  var url = '../mathPage/math.html';
+  location.href = url;
+}
+</script>
 </html>

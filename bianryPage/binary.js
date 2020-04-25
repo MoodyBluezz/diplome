@@ -162,16 +162,4 @@ function perc1() {
     b = a*document.form1.b.value;
     document.form1.total1.value = b
 }
-/*document.getElementById("backToMain").onclick = function () { backToMain() };
-
-function backToMain() {
-  var url = '../index.html';
-  location.href = url;
-}
-
-document.getElementById("nextPage").onclick = function () { nextPage() };
-
-function nextPage() {
-  var url = '../mathPage/math.html';
-  location.href = url;
-}*/
+/**/

@@ -9,30 +9,22 @@ function backToMain(){
 const inpName = document.getElementById('inpName');
 //const inpPass = document.getElementById('inpPass');
 const submitBtn = document.getElementById('btnSubmit');
-const valueOutput = document.getElementById('valueOutput');
+//const valueOutput = document.getElementById('valueOutput');
 
 submitBtn.onclick = function(){
     const name = inpName.value;
-   // const pass = inpPass.value;
-
-    // console.log(name);
-    // console.log(pass);
-
-    // if (name && pass){
-    //     localStorage.setItem(name, pass);
-    // }
-    // backToMain();
 
     if (name){
-        localStorage.setItem(name, 0);
+        localStorage.setItem("Login", name);
     }
     backToMain();
 }
+// let login = localStorage.getItem('Login');
+// valueOutput.textContent = login ? login : 'Login';
+// for (let i = 0; i < localStorage.length; i++) {
+//     const name = localStorage.key(i);
+//     const pass = localStorage.getItem(name);
 
-for (let i = 0; i < localStorage.length; i++) {
-    const name = localStorage.key(i);
-    const pass = localStorage.getItem(name);
-
-    valueOutput.innerHTML += `${name} ${pass}` + "&nbsp;" + "<i class='fa fa-user-circle-o' style='font-size:28px;color:white';></i>";
-    console.log(valueOutput);
-}
+//     valueOutput.innerHTML += `${name} ${pass}` + "&nbsp;" + "<i class='fa fa-user-circle-o' style='font-size:28px;color:white';></i>";
+//     console.log(valueOutput);
+// }

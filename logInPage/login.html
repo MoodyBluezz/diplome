@@ -5,27 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Авторизация</title>
     <link rel="stylesheet" href="../logInPage/login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 </head>
 <body>
   <header class="sticky">    
-    <div class="left sticky">
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
-        </div>
-        <span style="font-size:30px;cursor:pointer;color: aliceblue;" onclick="openNav()">&#9776;</span>
+    <div class="left">
         <a href="../index.html" class="logo">
-            <img src="../img/logoHead.png" alt="" srcset="">
+          <i style="font-size:30px;cursor:pointer;color: aliceblue;" class="fas fa-home"></i>&nbsp;
+          <img src="../img/logoHead.png" alt="" srcset="">
         </a>
-    </div>
-    <div class="right">
-        <div id="valueOutput">
-          
-        </div>
     </div>
   </header>
   <main>
@@ -59,16 +47,6 @@
   </main>
 
   <script src="login.js"></script>
-  <script>
-
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "350px";
-    }
-    
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-    }
-
-    </script>
+  <script src="../index.js"></script>
   </body>
 </html>

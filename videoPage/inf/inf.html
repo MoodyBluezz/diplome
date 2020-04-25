@@ -5,29 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../video.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <title>Document</title>
 </head>
 
 <body>
     <header class="sticky">
         <div class="left">
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Clients</a>
-                <a href="#">Contact</a>
-            </div>
-            <span style="font-size:30px;cursor:pointer;color: aliceblue;" onclick="openNav()">&#9776;</span>
-            <a href="../index.html" class="logo">
-                <img src="/img/logoHead.png" alt="" srcset="">
+            <a href="../../index.html" class="logo">
+              <i style="font-size:30px;cursor:pointer;color: aliceblue;" class="fas fa-home"></i>&nbsp;
+              <img src="../../img/logoHead.png" alt="" srcset="">
             </a>
         </div>
-        <div class="right">
-            <a href="#" id="logIn" class="login">
-                <span>Login</span>
-                <img src="/img/sign-in-alt-solid.svg" alt="">
+        <div class="extra">
+            <a href="../../logInPage/login.html" id="logIn" class="login">
+                <span>Войти</span>
+                <img src="img/sign-in-alt-solid.svg" alt="">
             </a>
+            <div class="translate">
+                <a href="#" id="valueOutput"><span></span></a>
+                <div class="more">
+                    <a href="#" id="logOut"> Выйти</a>
+                </div>
+            </div>
         </div>
     </header>
     <main>
@@ -147,7 +147,7 @@
             </div>
         </section>
     </main>
-    <script src="/index.js"></script>
+    <script src="../../index.js"></script>
 
     <script type="text/javascript">
         document.getElementById("backToMain").onclick = function () { backToMain() };

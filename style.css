@@ -70,6 +70,7 @@ header .left .logo {
 }
 
 header .left .logo img:first-child {
+  
   width: 30px;
 }
 
@@ -233,7 +234,7 @@ header .right .login img {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -243,7 +244,7 @@ header .right .login img {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: white;
   display: block;
   transition: 0.3s;
 }
@@ -478,4 +479,34 @@ header .right .login img {
 	.footer-distributed form button{
 		float: none;
   }
+}
+
+a {
+  color: white; 
+}
+
+.translate {
+  display: inline-block;
+  position: relative;
+}
+
+.more a {
+  color: #313131;
+}
+
+.more {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 5px 5px;
+  right: 0;
+  width: 80px;
+}
+
+.more a {
+  line-height: 20px;
+  display: block;
+  margin: 3px;
+  color: #313131;
+  padding: 0 5px;
 }
