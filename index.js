@@ -20,16 +20,19 @@ translate.addEventListener('mouseleave', () => {
 const logoutLink = document.getElementById('logOut');
 const loginLink = document.getElementById('logIn');
 // const valueOutput = document.querySelector('#valueOutput span');
-const valueOutput = document.getElementById('valueOutput');
+// const valueOutput = document.getElementById('valueOutput');
+const valueOutput = document.querySelector('#valueOutput #name');
+const iconOrder = document.getElementById('icon');
 let login = localStorage.getItem('Login');
 
 if(login){
   loginLink.style.display = 'none';
   valueOutput.textContent = login;
+  iconOrder.style.display = 'inline-block';
 }
 
 logoutLink.onclick = function(){
   localStorage.clear();
-  window.location.reload()
+  window.location.reload();
   valueOutput.textContent = loginLink;
 }

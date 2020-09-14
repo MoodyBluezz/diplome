@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Вычисления</title>
+  <link rel="icon" href="../img/logo.ico">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/lipten/slidePage/dist/slidePage.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
@@ -26,14 +27,13 @@
               <img src="../img/sign-in-alt-solid.svg" alt="">
           </a>
           <div class="translate">
-              <a href="#" id="valueOutput"><span></span></a>
+              <a href="#" id="valueOutput"><span id="name"></span>&nbsp; <i id="icon" style="display:none;" class="fa fa-user"></i></a>
               <div class="more">
                   <a href="#" id="logOut"> Выйти</a>
               </div>
           </div>
       </div>
-          <!-- <button id="valueOutput"><span></span><i class="fa fa-user-circle-o"></i></button> -->
-    </div>
+  </div>
   </header>
   <main>
     <div class="main">
@@ -390,7 +390,7 @@
                 </div>
                 <div class="profile-card__cnt js-profile-cnt">
                   <div class="profile-card__name">Преобразователь</div>
-                  <div class="profile-card__txt">с <strong>десятичного на двоичный</strong></div>
+                  <div class="profile-card__txt"><strong>сортировки данных.</strong></div>
                   <div class="profile-card-loc">
                     <form method="POST" name="sorter">
                       <table cellspacing="0" cellpadding="0" width="100%">
@@ -437,8 +437,8 @@
                   <div class="profile-card__txt">с <strong>метра/c на милю/час</strong></div>
                   <div class="profile-card-loc">
                     <form name="converter">
-                      <input type="text" value="0.0"  name="mps"> метров/с
-                      <input type="text" value="0.0"  name="mph"> миль/час
+                      <input type="text" value="0.0"  name="mps"> метров/с <br>
+                      <input type="text" value="0.0"  name="mph"> миль/час <br>
                       <input id="button1" id="button2" type="button" value="Ответ" onclick="javascript:calc()"> 
                       <input id="button2" id="button2" type="reset" value="Обновить" onclick="javascript:calc()">
                     </form>
@@ -474,7 +474,7 @@
     
                 <div class="profile-card__cnt js-profile-cnt">
                   <div class="profile-card__name">Преобразователь</div>
-                  <div class="profile-card__txt">с <strong>десятичного на двоичный</strong></div>
+                  <div class="profile-card__txt">с <strong>процентного соотношения.</strong></div>
                   <div class="profile-card-loc">
                     <form name=form1 method="post">
                       
